@@ -8,7 +8,7 @@ class MyHandler(FileSystemEventHandler):
     def on_modified(self, event):
         #print('file changed')
         #print(os.popen("ls -l").read())
-        os.popen("git add simple.py")
+        os.popen("git add simple/simple.py")
         os.popen("git commit -m 'Fixes a bug.'")
         os.popen("git push")
 
