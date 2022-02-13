@@ -9,11 +9,11 @@ class MyHandler(FileSystemEventHandler):
         #print('file changed')
         #print(os.popen("ls -l").read())
         os.popen("git add simple/simple.py")
-        os.popen("git commit -m 'Fixes a bug.'")
+        os.popen("git commit -m 'Fixes from st.'")
         os.popen("git push")
 
 
-@st.cache
+#@st.cache
 def git_call(token):
     os.system('git config --global user.name "napoles-uach"')
     os.system('git config --global user.email "jnapoles@uach.mx"')
