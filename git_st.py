@@ -20,8 +20,8 @@ def git_call(token):
     os.system('git config --global pull.rebase false')
 
     os.system(f'git clone https://napoles-uach:{token}@github.com/napoles-uach/simple.git folder')
-    os.system('git fetch')
-    os.system('git merge FETCH_HEAD')
+    #os.system('git fetch')
+    #os.system('git merge FETCH_HEAD')
 
 if __name__ == "__main__":
     st.title('Hi :cat: :+1:')
@@ -29,18 +29,18 @@ if __name__ == "__main__":
     
     git_call(token)
 
-    event_handler = MyHandler()
-    observer = Observer()
-    observer.schedule(event_handler, path='simple/simple.py', recursive=False)
-    observer.start()
+    #event_handler = MyHandler()
+    #observer = Observer()
+    #observer.schedule(event_handler, path='simple/simple.py', recursive=False)
+    #observer.start()
 
-    input_=st.text_area('Area for Python+Streamlit code. Try: st.balloons()')
-    with open('simple/simple.py', 'w') as f:
-        if os.stat('simple/simple.py').st_size > 0:
-            pass
-        else:
-            f.write('import streamlit as st\n')
-        f.write(input_+'\n')
+    #input_=st.text_area('Area for Python+Streamlit code. Try: st.balloons()')
+    #with open('simple/simple.py', 'w') as f:
+    #    if os.stat('simple/simple.py').st_size > 0:
+    #        pass
+    #    else:
+    #        f.write('import streamlit as st\n')
+    #    f.write(input_+'\n')
 
 #    try:
 #        while True:
