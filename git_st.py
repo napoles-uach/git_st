@@ -35,9 +35,9 @@ if __name__ == "__main__":
             f.write('import streamlit as st\n')
         f.write(input_+'\n')
 
-#    try:
-#        while True:
-#            time.sleep(1)
-#    except KeyboardInterrupt:
-#        observer.stop()
-#    observer.join()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
