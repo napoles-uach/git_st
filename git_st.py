@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-st.title('Hi :cat:')
+st.title('Hi :cat: :+1:')
 os.system('git config --global user.name "napoles-uach"')
 os.system('git config --global user.email "jnapoles@uach.mx"')
 os.system('git config --global pull.rebase false')
