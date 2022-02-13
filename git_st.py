@@ -24,7 +24,7 @@ if __name__ == "__main__":
     st.write('test')
     event_handler = MyHandler()
     observer = Observer()
-    observer.schedule(event_handler, path='simple.py', recursive=False)
+    observer.schedule(event_handler, path='simple/simple.py', recursive=False)
     #observer.start()
 
 #    try:
