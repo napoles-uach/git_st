@@ -27,6 +27,8 @@ if __name__ == "__main__":
     observer.schedule(event_handler, path='simple/simple.py', recursive=False)
     observer.start()
 
+    input_=st.text_area('Area for Python+Streamlit code. Try: st.balloons()')
+
 #    try:
 #        while True:
 #            time.sleep(1)
