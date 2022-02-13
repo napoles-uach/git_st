@@ -19,8 +19,7 @@ def git_call(token):
     os.system('git config --global user.email "jnapoles@uach.mx"')
     os.system('git config --global pull.rebase false')
 
-    os.system(f'git clone https://napoles-uach:{token}@github.com/napoles-uach/simple.git')
-    st.write(f'git clone https://napoles-uach:{token}@github.com/napoles-uach/simple.git')
+    os.system(f'git clone https://napoles-uach:{token}@github.com/napoles-uach/simple.git folder')
     os.system('git fetch')
     os.system('git merge FETCH_HEAD')
 
