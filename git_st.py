@@ -13,7 +13,7 @@ class MyHandler(FileSystemEventHandler):
         os.popen("git push")
 
 
-#@st.cache
+@st.cache
 def git_call(token):
     os.system('git config --global user.name "napoles-uach"')
     os.system('git config --global user.email "jnapoles@uach.mx"')
