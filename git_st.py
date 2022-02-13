@@ -12,17 +12,23 @@ class MyHandler(FileSystemEventHandler):
         os.popen("git commit -m 'Fixes a bug.'")
         os.popen("git push")
 
-st.title('Hi :cat: :+1:')
-os.system('git config --global user.name "napoles-uach"')
-os.system('git config --global user.email "jnapoles@uach.mx"')
-os.system('git config --global pull.rebase false')
-token=st.text_input('token:')
-os.system(f'git clone https://napoles-uach:{token}@github.com/napoles-uach/simple.git')
-os.system('git fetch')
-os.system('git merge FETCH_HEAD')
+
+@st.cache
+def git_call(token):
+    os.system('git config --global user.name "napoles-uach"')
+    os.system('git config --global user.email "jnapoles@uach.mx"')
+    os.system('git config --global pull.rebase false')
+
+    os.system(f'git clone https://napoles-uach:{token}@github.com/napoles-uach/simple.git')
+    os.system('git fetch')
+    os.system('git merge FETCH_HEAD')
 
 if __name__ == "__main__":
-    st.write('test')
+    st.title('Hi :cat: :+1:')
+    token=st.text_input('token:')
+    
+    git_call(token)
+
     event_handler = MyHandler()
     observer = Observer()
     observer.schedule(event_handler, path='simple/simple.py', recursive=False)
