@@ -23,7 +23,7 @@ os.system('git merge FETCH_HEAD')
 if __name__ == "__main__":
     event_handler = MyHandler()
     observer = Observer()
-    observer.schedule(event_handler, path='app.py', recursive=False)
+    observer.schedule(event_handler, path='simple.py', recursive=False)
     observer.start()
 
 #    try:
