@@ -20,7 +20,8 @@ os.system('git clone https://napoles-uach:ghp_BJfCvTZbBJ3q9YRZGo8jkvsKFQlNtn10p4
 os.system('git fetch')
 os.system('git merge FETCH_HEAD')
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
+    st.write('test')
 #    event_handler = MyHandler()
 #    observer = Observer()
 #    observer.schedule(event_handler, path='simple.py', recursive=False)
