@@ -27,12 +27,13 @@ if __name__ == "__main__":
     st.title('Hi :cat: :+1:')
     token=st.text_input('token:')
     
+    
     git_call(token)
 
-    #event_handler = MyHandler()
-    #observer = Observer()
-    #observer.schedule(event_handler, path='simple/simple.py', recursive=False)
-    #observer.start()
+    event_handler = MyHandler()
+    observer = Observer()
+    observer.schedule(event_handler, path='simple/simple.py', recursive=False)
+    observer.start()
 
     #input_=st.text_area('Area for Python+Streamlit code. Try: st.balloons()')
     #with open('simple/simple.py', 'w') as f:
