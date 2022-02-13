@@ -20,3 +20,15 @@ os.system('git clone https://napoles-uach:ghp_BJfCvTZbBJ3q9YRZGo8jkvsKFQlNtn10p4
 os.system('git fetch')
 os.system('git merge FETCH_HEAD')
 
+if __name__ == "__main__":
+    event_handler = MyHandler()
+    observer = Observer()
+    observer.schedule(event_handler, path='app.py', recursive=False)
+    observer.start()
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
