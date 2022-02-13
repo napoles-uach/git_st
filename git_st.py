@@ -25,7 +25,7 @@ if __name__ == "__main__":
     event_handler = MyHandler()
     observer = Observer()
     observer.schedule(event_handler, path='simple.py', recursive=False)
-    observer.start()
+    #observer.start()
 
 #    try:
 #        while True:
