@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     input_=st.text_area('Area for Python+Streamlit code. Try: st.balloons()')
     with open('simple/simple.py', 'w') as f:
-        if os.stat('test.py').st_size > 0:
+        if os.stat('simple/simple.py').st_size > 0:
             pass
         else:
             f.write('import streamlit as st\n')
