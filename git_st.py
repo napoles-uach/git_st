@@ -28,6 +28,12 @@ if __name__ == "__main__":
     observer.start()
 
     input_=st.text_area('Area for Python+Streamlit code. Try: st.balloons()')
+    with open('simple/simple.py', 'w') as f:
+        if os.stat('test.py').st_size > 0:
+            pass
+        else:
+            f.write('import streamlit as st\n')
+        f.write(input_+'\n')
 
 #    try:
 #        while True:
