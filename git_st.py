@@ -26,9 +26,9 @@ if __name__ == "__main__":
     observer.schedule(event_handler, path='app.py', recursive=False)
     observer.start()
 
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        observer.stop()
-    observer.join()
+#    try:
+#        while True:
+#            time.sleep(1)
+#    except KeyboardInterrupt:
+#        observer.stop()
+#    observer.join()
